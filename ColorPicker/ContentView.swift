@@ -8,14 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var textField = "255"
+    @State var sliderValue = 105.0
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            HStack {
+                Text("\(lround(sliderValue))")
+                Slider(value: $sliderValue, in: 0...255, step: 1)
+                TextField("", value: $sliderValue, formatter: NumberFormatter())
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .frame(width: 45)
+            }.padding(.horizontal)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+        }
     }
 }
