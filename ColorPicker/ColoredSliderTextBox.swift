@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ColoredSliderTextBox: View {
     let colorLine: Color
-    @State private var value = 105.0
+    @Binding var value: Double
     
     var body: some View {
         VStack {
@@ -21,13 +21,7 @@ struct ColoredSliderTextBox: View {
                 TextField("", value: $value, formatter: NumberFormatter())
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 45)
-            }.padding(.horizontal)
+            }
         }
-    }
-}
-
-struct ColoredSliderTextBox_Previews: PreviewProvider {
-    static var previews: some View {
-        ColoredSliderTextBox(colorLine: .green)
     }
 }
