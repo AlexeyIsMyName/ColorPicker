@@ -18,6 +18,7 @@ struct ColoredSliderTextBox: View {
                     .frame(width: 35)
                 Slider(value: $value, in: 0...255, step: 1)
                     .accentColor(colorLine)
+                    .shadow(color: colorLine.opacity(1 / 255 * value), radius: 2)
                 TextField("", value: $value, formatter: NumberFormatter())
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 45)
