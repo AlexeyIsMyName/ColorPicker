@@ -11,6 +11,7 @@
 		E7C20A3526127EF9007189EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C20A3426127EF9007189EB /* ContentView.swift */; };
 		E7C20A3726127EFA007189EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7C20A3626127EFA007189EB /* Assets.xcassets */; };
 		E7C20A3A26127EFA007189EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7C20A3926127EFA007189EB /* Preview Assets.xcassets */; };
+		E7C20A4426129284007189EB /* ColoredSliderTextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C20A4326129284007189EB /* ColoredSliderTextBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		E7C20A3626127EFA007189EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7C20A3926127EFA007189EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7C20A3B26127EFA007189EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7C20A4326129284007189EB /* ColoredSliderTextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredSliderTextBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				E7C20A3226127EF9007189EB /* ColorPickerApp.swift */,
 				E7C20A3426127EF9007189EB /* ContentView.swift */,
+				E7C20A4326129284007189EB /* ColoredSliderTextBox.swift */,
 				E7C20A3626127EFA007189EB /* Assets.xcassets */,
 				E7C20A3B26127EFA007189EB /* Info.plist */,
 				E7C20A3826127EFA007189EB /* Preview Content */,
@@ -140,6 +143,7 @@
 			files = (
 				E7C20A3526127EF9007189EB /* ContentView.swift in Sources */,
 				E7C20A3326127EF9007189EB /* ColorPickerApp.swift in Sources */,
+				E7C20A4426129284007189EB /* ColoredSliderTextBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
