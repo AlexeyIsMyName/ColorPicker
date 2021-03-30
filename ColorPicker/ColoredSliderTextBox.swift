@@ -14,6 +14,7 @@ struct ColoredSliderTextBox: View {
     @State private var isEditing = false
     
     var body: some View {
+        /* попытка
         let someValue = Binding<String> (
             get: { "\(lround(value))" },
             set: {
@@ -27,6 +28,7 @@ struct ColoredSliderTextBox: View {
                 }
             }
         )
+         */
         
         return HStack {
             Text("\(lround(value))")
@@ -34,10 +36,8 @@ struct ColoredSliderTextBox: View {
             Slider(value: $value, in: 0...255, step: 1)
                 .accentColor(colorLine)
                 .shadow(color: colorLine.opacity(1 / 255 * value), radius: 2)
-            TextField("", text: someValue, onCommit:  {
-                self.isEditing = true
-            })
             
+            TextField("", value: $value, formatter: numberFormatter)
                 .disableAutocorrection(true)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .frame(width: 45)
