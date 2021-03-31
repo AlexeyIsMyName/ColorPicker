@@ -11,32 +11,31 @@ struct ColoredSliderTextBox: View {
     let colorLine: Color
     @Binding var value: Double
     @State private var alertPresented = false
-    @State private var isEditing = false
+    //@State private var isEditing = false
     
     var body: some View {
-        /* попытка
+        /*
         let someValue = Binding<String> (
             get: { "\(lround(value))" },
             set: {
-                if isEditing {
+                if !isEditing {
                     if let value = numberFormatter.number(from: $0) {
                         self.value = value.doubleValue
                     } else {
                         alertPresented = true
-                        isEditing = false
                     }
                 }
             }
         )
-         */
+        */
         
-        return HStack {
+        HStack {
             Text("\(lround(value))")
                 .frame(width: 35)
             Slider(value: $value, in: 0...255, step: 1)
                 .accentColor(colorLine)
                 .shadow(color: colorLine.opacity(1 / 255 * value), radius: 2)
-            
+
             TextField("", value: $value, formatter: numberFormatter)
                 .disableAutocorrection(true)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
